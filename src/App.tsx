@@ -23,6 +23,7 @@ import {
   Skull
 } from 'lucide-react';
 import { BioreactorInputs, SimulationResult, AIGuardReport, HoneyPotStatus } from './types';
+import MediaStudio from './components/MediaStudio';
 
 export default function App() {
   // Bioreactor Inputs
@@ -944,6 +945,9 @@ export default function App() {
         </aside>
 
       </div>
+
+      {/* Interactive Media Engine Suite */}
+      <MediaStudio currentTwinData={simulation} showToast={showToast} />
 
       {/* AI Guard Certificate Report Overlay Presentation */}
       <AnimatePresence>
