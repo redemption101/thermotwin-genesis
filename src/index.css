@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:ital,wght@0,400..700;1,400..700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Custom continuous particle flows or glows for biomanufacturing digital twin visualizer */
+@keyframes flowUp {
+  0% { transform: translateY(100%) translateX(-50%); opacity: 0; }
+  10% { opacity: 0.8; }
+  90% { opacity: 0.8; }
+  100% { transform: translateY(-100%) translateX(-50%); opacity: 0; }
+}
+
+@keyframes pulseSlow {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.05); }
+}
+
+@keyframes spinSlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.particle-flow-1 {
+  animation: flowUp 6s infinite linear;
+}
+.particle-flow-2 {
+  animation: flowUp 4s infinite linear;
+}
+.particle-flow-3 {
+  animation: flowUp 8s infinite linear;
+}
+
+.bioreactor-pulse {
+  animation: pulseSlow 5s infinite ease-in-out;
+}
+
+.impeller-spin {
+  animation: spinSlow 4s infinite linear;
+}
+
+/* Custom scrollbars for high tech display */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #05070a;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}

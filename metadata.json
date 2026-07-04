@@ -1,0 +1,6 @@
+{
+  "name": "ThermoTwin Genesis",
+  "description": "Predictive thermodynamic digital twin for biomanufacturing scale-up simulation with real-time physical-law verification, automated compliance reporting, and astrophysics security honey-pot protocols.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
