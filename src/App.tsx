@@ -24,6 +24,7 @@ import {
 } from 'lucide-react';
 import { BioreactorInputs, SimulationResult, AIGuardReport, HoneyPotStatus } from './types';
 import MediaStudio from './components/MediaStudio';
+import FirebaseCloudSuite from './components/FirebaseCloudSuite';
 
 export default function App() {
   // Bioreactor Inputs
@@ -948,6 +949,17 @@ export default function App() {
 
       {/* Interactive Media Engine Suite */}
       <MediaStudio currentTwinData={simulation} showToast={showToast} />
+
+      {/* Firebase Cloud Synchronization Suite */}
+      <FirebaseCloudSuite 
+        currentInputs={inputs} 
+        currentTwinData={simulation} 
+        onRestoreInputs={(restored) => {
+          setInputs(restored);
+          runSimulation(restored);
+        }} 
+        showToast={showToast} 
+      />
 
       {/* AI Guard Certificate Report Overlay Presentation */}
       <AnimatePresence>
